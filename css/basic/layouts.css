@@ -1,0 +1,22 @@
+/* GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+.gallery img {
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* EDITOR */
+.editor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 30px;
+    margin: 0 auto;
+}

@@ -1,7 +1,4 @@
-* {
-    box-sizing: border-box;
-}
-
 canvas {
+    background-color: #b4b4b4;
     border: 1px solid black;
 }

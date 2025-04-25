@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #0db893;
+}
+
+h3 {
+    margin: 0 1em;
+}
+
+img {
+    width: 100%;
+}

@@ -1,0 +1,6 @@
+.main-header {
+    display: flex;
+    align-items: center;
+    background-color: #a8a8a8;
+    min-height: 45px;
+}
