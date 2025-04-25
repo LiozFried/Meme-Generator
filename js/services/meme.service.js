@@ -12,7 +12,7 @@ var gMeme = {
         {
             txt: 'Good Meme',
             font: 'Arial',
-            size: 16,
+            size: 40,
             color: 'black'
         }
     ]
@@ -29,4 +29,9 @@ function getImgUrlById(id) {
 
 function setImg(imgId) {
     gMeme.selectedImgId = imgId
+}
+
+function setLineTxt(value) {
+    const idx = gMeme.selectedLineIdx
+    gMeme.lines[idx].txt = value
 }

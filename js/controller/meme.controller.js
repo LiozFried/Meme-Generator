@@ -17,13 +17,18 @@ function renderMeme() {
     img.src = imgUrl
     img.onload = () => {
         gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height)
-        drawText(txtLine.txt, txtLine.font, txtLine.size, txtLine.color, 200, 40)
+        drawText(txtLine.txt, txtLine.font, txtLine.size, txtLine.color, 100, 40)
     }
 }
 
 function drawText(txt, font, fontSize, color, x, y) {
     gCtx.fillStyle = color
-    gCtx.font = `'${fontSize}px ${font}'`
+    gCtx.font = `${fontSize}px ${font}`
 
     gCtx.fillText(txt, x, y)
+}
+
+function onMemeText(value) {
+    setLineTxt(value)
+    renderMeme()
 }
