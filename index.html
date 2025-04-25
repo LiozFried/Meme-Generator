@@ -16,20 +16,24 @@
 
     <main class="main-content">
 
-        <section class="gallery">
-        </section>
+        <div class="main-gallery">
+            <section class="gallery">
+            </section>
+        </div>
 
-        <section class="editor">
-            <div class="canvas-container">
-                <canvas width="400" height="400">
-                </canvas>
-            </div>
+        <div class="main-editor">
+            <section class="editor">
+                <div class="canvas-container">
+                    <canvas width="400" height="400">
+                    </canvas>
+                </div>
 
-            <aside class="edit-controller">
-                <label for="memeTxt">Meme Text:</label>
-                <input type="text" name="txt" id="memeTxt" oninput="onMemeText(value)" value="Good Meme">
-            </aside>
-        </section>
+                <aside class="edit-controller">
+                    <label for="memeTxt">Meme Text:</label>
+                    <input type="text" name="txt" id="memeTxt" oninput="onMemeText(value)" value="Good Meme">
+                </aside>
+            </section>
+        </div>
     </main>
 
     <script src="js/main.js"></script>

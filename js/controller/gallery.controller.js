@@ -1,6 +1,7 @@
 'use strict'
 
 function onInit() {
+    hideElement('.main-editor')
     renderGallery()
 }
 
@@ -14,6 +15,8 @@ function renderGallery() {
 
 function onImgSelect(elImg) {
     setImg(+elImg.id)
+    hideElement('.main-gallery')
+    showElement('.main-editor')
     defineCanvas()
     renderMeme()
 }
