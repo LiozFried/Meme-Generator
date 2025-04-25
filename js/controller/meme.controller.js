@@ -10,10 +10,20 @@ function defineCanvas() {
 
 function renderMeme() {
     const meme = getMeme()
+    var txtLine = meme.lines[meme.selectedLineIdx]
     const imgUrl = getImgUrlById(meme.selectedImgId)
+
     const img = new Image()
     img.src = imgUrl
     img.onload = () => {
         gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height)
+        drawText(txtLine.txt, txtLine.font, txtLine.size, txtLine.color, 200, 40)
     }
+}
+
+function drawText(txt, font, fontSize, color, x, y) {
+    gCtx.fillStyle = color
+    gCtx.font = `'${fontSize}px ${font}'`
+
+    gCtx.fillText(txt, x, y)
 }
