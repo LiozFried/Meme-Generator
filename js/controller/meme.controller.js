@@ -32,3 +32,10 @@ function onMemeText(value) {
     setLineTxt(value)
     renderMeme()
 }
+
+function onDownloadCanvas(elLink) {
+    const dataUrl = gElCanvas.toDataURL()
+
+    elLink.href = dataUrl
+    elLink.download = 'my-meme'
+}

@@ -1,0 +1,12 @@
+.act-btns {
+    width: fit-content;
+    border: 1px solid black;
+    border-radius: 2em;
+    padding: 0.3em 0.5em;
+
+    color: white;
+}
+
+.act-btns.download-btn {
+    background-color: #c138eb;
+}
