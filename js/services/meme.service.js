@@ -35,3 +35,8 @@ function setLineTxt(value) {
     const idx = gMeme.selectedLineIdx
     gMeme.lines[idx].txt = value
 }
+
+function setTxtColor(value) {
+    const idx = gMeme.selectedLineIdx
+    gMeme.lines[idx].color = value
+}

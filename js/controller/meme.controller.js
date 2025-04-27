@@ -33,6 +33,11 @@ function onMemeText(value) {
     renderMeme()
 }
 
+function onChangeTxtColor(value) {
+    setTxtColor(value)
+    renderMeme()
+}
+
 function onDownloadCanvas(elLink) {
     const dataUrl = gElCanvas.toDataURL()
 
