@@ -38,6 +38,11 @@ function onChangeTxtColor(value) {
     renderMeme()
 }
 
+function onFontSize(diff) {
+    setFontSize(diff)
+    renderMeme()
+}
+
 function onDownloadCanvas(elLink) {
     const dataUrl = gElCanvas.toDataURL()
 

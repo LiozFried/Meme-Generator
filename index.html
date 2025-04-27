@@ -28,16 +28,25 @@
                     </canvas>
                 </div>
 
-                <aside class="edit-controller">
-                    <label for="memeTxt">Meme Text:</label>
-                    <input type="text" name="txt" id="memeTxt" oninput="onMemeText(value)" value="Good Meme">
+                <aside class="edit-controller flex">
+                    <div class="meme-text">
+                        <label for="memeTxt">Meme Text:</label>
+                        <input type="text" name="txt" id="memeTxt" oninput="onMemeText(value)" value="Good Meme">
+                    </div>
 
-                    <div class="settings">
-                        <input type="color" name="clr" id="txtColor" oninput="onChangeTxtColor(value)" value="black">
+                    <div class="settings flex">
+                        <input class="txt-color" type="color" name="clr" id="txtColor" oninput="onChangeTxtColor(value)" value="#000000">
+                        <button class="settings-btns size-btn" onclick="onFontSize(4)">
+                            <div class="fa font-size">+</div>
+                        </button>
+                        <button class="settings-btns size-btn" onclick="onFontSize(-4)">
+                            <div class="fa font-size">-</div>
+                        </button>
                     </div>
 
                     <div class="act">
-                        <a href="#" class="act-btns download-btn flex" onclick="onDownloadCanvas(this)" download="file-name">Download Meme <div class="fa download"></div></a>
+                        <a href="#" class="act-btns download-btn flex" onclick="onDownloadCanvas(this)"
+                            download="file-name">Download Meme <div class="fa download"></div></a>
                     </div>
 
                 </aside>

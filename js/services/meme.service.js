@@ -40,3 +40,8 @@ function setTxtColor(value) {
     const idx = gMeme.selectedLineIdx
     gMeme.lines[idx].color = value
 }
+
+function setFontSize(diff) {
+    const idx = gMeme.selectedLineIdx
+    gMeme.lines[idx].size += diff
+}

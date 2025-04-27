@@ -1,4 +1,9 @@
 .edit-controller {
+    flex-direction: column;
     background-color: #33333379;
     border: 1px solid black;
+}
+
+.edit-controller .meme-text {
+    margin-block-start: 0.3em;
 }

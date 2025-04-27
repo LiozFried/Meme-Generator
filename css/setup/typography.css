@@ -18,3 +18,7 @@
 .fa.download::before {
     content: '\f019';
 }
+
+.fa.font-size::before {
+    content: '\f031';
+}
