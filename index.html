@@ -34,6 +34,11 @@
                         <input type="text" name="txt" id="memeTxt" oninput="onMemeText(value)" value="Good Meme">
                     </div>
 
+                    <div class="lines-settings">
+                        <button class="fa add-line" onclick="onAddLine()"></button>
+                        <button class="fa switch-line" onclick="onSwitchLine()"></button>
+                    </div>
+
                     <div class="settings flex">
                         <input class="txt-color" type="color" name="clr" id="txtColor" oninput="onChangeTxtColor(value)" value="#000000">
                         <button class="settings-btns size-btn" onclick="onFontSize(4)">

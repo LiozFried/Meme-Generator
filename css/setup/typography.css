@@ -22,3 +22,11 @@
 .fa.font-size::before {
     content: '\f031';
 }
+
+.fa.add-line::before {
+    content: '\2b';
+}
+
+.fa.switch-line::before {
+    content: '\e4af';
+}

@@ -13,8 +13,16 @@ var gMeme = {
             txt: 'Good Meme',
             font: 'Arial',
             size: 40,
-            color: 'black'
-        }
+            color: 'black',
+            pos: { x: 10, y: 50}
+        },
+        {
+            txt: 'Second Line',
+            font: 'Arial',
+            size: 20,
+            color: 'black',
+            pos: { x: 10, y: 100}
+        },
     ]
 }
 
@@ -34,6 +42,22 @@ function setImg(imgId) {
 function setLineTxt(value) {
     const idx = gMeme.selectedLineIdx
     gMeme.lines[idx].txt = value
+}
+
+function addLine() {
+   var newLine = {
+        txt: 'New Line',
+        font: 'Arial',
+        size: 20,
+        color: 'black',
+        pos: { x: 10, y: 50 * (gMeme.lines.length + 1)}
+    }
+    gMeme.lines.push(newLine)
+}
+
+function switchLine() {
+    gMeme.selectedLineIdx ++
+    if (gMeme.selectedLineIdx >= gMeme.lines.length) gMeme.selectedLineIdx = 0
 }
 
 function setTxtColor(value) {
