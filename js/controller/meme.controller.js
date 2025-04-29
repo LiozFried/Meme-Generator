@@ -22,7 +22,7 @@ function renderMeme() {
         txtLines.forEach(txtLine => {
             drawText(txtLine.txt, txtLine.font, txtLine.size, txtLine.color, txtLine.pos.x, txtLine.pos.y)
         })
-        // renderFrameSelectedTxt()
+        renderFrameSelectedTxt()
     }
 }
 
@@ -45,20 +45,22 @@ function onAddLine() {
 
 function onSwitchLine() {
     switchLine()
-    // renderFrameSelectedTxt()
+    renderFrameSelectedTxt()
+    renderMeme()
 }
 
-// function renderFrameSelectedTxt() {
-//     const meme = getMeme()
-//     const txtLineIdx = meme.selectedLineIdx
-//     const height = meme.lines[txtLineIdx].size
-//     const width = gCtx.measureText(meme.lines[txtLineIdx].txt)
-//     const pos = meme.lines[txtLineIdx].pos
+function renderFrameSelectedTxt() {
+    const meme = getMeme()
+    const txtLineIdx = meme.selectedLineIdx
+    const size = meme.lines[txtLineIdx].size
 
-//     console.log(pos.x, pos.y, width.width, height)
+    gCtx.font = `${size}px ${meme.lines[txtLineIdx].font}`
+    const metrics = gCtx.measureText(meme.lines[txtLineIdx].txt)
+    const pos = meme.lines[txtLineIdx].pos
+    let fontHeight = metrics.fontBoundingBoxAscent + metrics.fontBoundingBoxDescent;
 
-//     gCtx.strokeRect(pos.x, pos.y, width.width, height)
-// }
+    gCtx.strokeRect(pos.x - 5, pos.y - fontHeight + 3, metrics.width + 10, fontHeight)
+}
 
 function onChangeTxtColor(value) {
     setTxtColor(value)
