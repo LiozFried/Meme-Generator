@@ -57,7 +57,7 @@ function renderFrameSelectedTxt() {
     gCtx.font = `${size}px ${meme.lines[txtLineIdx].font}`
     const metrics = gCtx.measureText(meme.lines[txtLineIdx].txt)
     const pos = meme.lines[txtLineIdx].pos
-    let fontHeight = metrics.fontBoundingBoxAscent + metrics.fontBoundingBoxDescent;
+    let fontHeight = metrics.fontBoundingBoxAscent + metrics.fontBoundingBoxDescent
 
     gCtx.strokeRect(pos.x - 5, pos.y - fontHeight + 3, metrics.width + 10, fontHeight)
 }
