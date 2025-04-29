@@ -1,6 +1,9 @@
 .settings {
     margin-block-start: 1em;
     justify-content: space-evenly;
+
+    padding: 0.5em;
+    background-color: #049e9ead;
 }
 
 .settings .txt-color {
