@@ -14,17 +14,21 @@ var gMeme = {
             font: 'Arial',
             size: 40,
             color: 'black',
-            pos: { x: 10, y: 50}
+            pos: { x: 10, y: 50 },
+            lineIdx: 0,
         },
         {
             txt: 'Second Line',
             font: 'Arial',
             size: 20,
             color: 'black',
-            pos: { x: 10, y: 100}
+            pos: { x: 10, y: 100 },
+            lineIdx: 1,
         },
     ]
 }
+
+var gLinesCount = gMeme.lines.length
 
 function getMeme() {
     return gMeme
@@ -45,18 +49,24 @@ function setLineTxt(value) {
 }
 
 function addLine() {
-   var newLine = {
+    var newLine = {
         txt: 'New Line',
         font: 'Arial',
         size: 20,
         color: 'black',
-        pos: { x: 10, y: 50 * (gMeme.lines.length + 1)}
+        pos: { x: 10, y: 50 * (gMeme.lines.length + 1) },
+        lineIdx: gLinesCount + 1,
     }
     gMeme.lines.push(newLine)
+    countLines()
+}
+
+function countLines() {
+    gLinesCount = gMeme.lines.length
 }
 
 function switchLine() {
-    gMeme.selectedLineIdx ++
+    gMeme.selectedLineIdx++
     if (gMeme.selectedLineIdx >= gMeme.lines.length) gMeme.selectedLineIdx = 0
 }
 
@@ -68,4 +78,25 @@ function setTxtColor(value) {
 function setFontSize(diff) {
     const idx = gMeme.selectedLineIdx
     gMeme.lines[idx].size += diff
+}
+
+function txtClicked(clickedPos) {
+    const lines = gMeme.lines
+    lines.forEach(line => {
+        let end = measureTextWidth(line.txt, line.font, line.size)
+        console.log(end)
+        if ((clickedPos.x >= line.pos.x || clickedPos.x <= end.width) && (clickedPos.y >= line.pos.y || clickedPos.y <= end.hight)) {
+            gMeme.selectedLineIdx = line.lineIdx
+        } else {
+            console.log(`line: ${line.lineIdx} not clicked`)
+        }
+    })
+}
+
+function measureTextWidth(txt, font, fontSize) {
+    gCtx.font = `${fontSize}px ${font}`
+    const metrics = gCtx.measureText(txt)
+    let fontHeight = metrics.fontBoundingBoxAscent + metrics.fontBoundingBoxDescent
+
+    return { width: metrics.width, hight: fontHeight }
 }
