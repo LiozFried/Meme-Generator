@@ -28,7 +28,7 @@ var gMeme = {
     ]
 }
 
-var gLinesCount = gMeme.lines.length
+var gLinesCount = gMeme.lines.length - 1
 
 function getMeme() {
     return gMeme
@@ -62,7 +62,7 @@ function addLine() {
 }
 
 function countLines() {
-    gLinesCount = gMeme.lines.length
+    gLinesCount = gMeme.lines.length - 1
 }
 
 function switchLine() {
@@ -84,8 +84,12 @@ function txtClicked(clickedPos) {
     const lines = gMeme.lines
     lines.forEach(line => {
         let end = measureTextWidth(line.txt, line.font, line.size)
-        console.log(end)
-        if ((clickedPos.x >= line.pos.x || clickedPos.x <= end.width) && (clickedPos.y >= line.pos.y || clickedPos.y <= end.hight)) {
+        // console.log(end)
+        // console.log(clickedPos)
+        // console.log(line)
+        //console.log(((clickedPos.x >= line.pos.x && clickedPos.x <= line.pos.x + end.width) && (clickedPos.y >= line.pos.y && clickedPos.y <=  line.pos.y + end.hight)));
+
+        if ((clickedPos.x >= (line.pos.x - 5) && clickedPos.x <= (line.pos.x + end.width + 10)) && (clickedPos.y >= (line.pos.y - end.hight + 3) && clickedPos.y <= (line.pos.y + end.hight))) {
             gMeme.selectedLineIdx = line.lineIdx
         } else {
             console.log(`line: ${line.lineIdx} not clicked`)
