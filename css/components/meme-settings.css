@@ -1,5 +1,5 @@
 .settings {
-    margin-block-start: 1em;
+    margin-block-start: 2em;
     justify-content: space-evenly;
 
     padding: 0.5em;
@@ -8,4 +8,8 @@
 
 .settings .txt-color {
     cursor: pointer;
+}
+
+.meme-text {
+    align-self: center;
 }

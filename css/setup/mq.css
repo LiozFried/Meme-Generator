@@ -1,0 +1,29 @@
+/* SMALL */
+@media screen and (width > 640px) {
+    .main-content {
+        grid-template-columns: minmax(20px, 1fr) minmax(auto, 600px) minmax(20px, 1fr);
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+}
+
+/* MEDIUM */
+@media screen and (width > 920px) {
+    .main-content {
+        grid-template-columns: minmax(20px, 1fr) minmax(auto, 880px) minmax(20px, 1fr);
+    }
+
+    .editor {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* LARGE */
+@media screen and (width >1060px) {
+    .main-content {
+        grid-template-columns: minmax(20px, 1fr) minmax(auto, 1020px) minmax(20px, 1fr);
+    }
+}

@@ -15,3 +15,6 @@
 @import url('./components/meme-settings.css');
 @import url('./components/settings-btns.css');
 @import url('./components/lines-settings.css');
+
+/* MEDIA QUERY */
+@import url('./setup/mq.css');
