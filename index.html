@@ -41,12 +41,15 @@
 
                     <div class="settings flex">
                         <input class="txt-color" type="color" name="clr" id="txtColor" oninput="onChangeTxtColor(value)" value="#000000">
+
                         <button class="settings-btns size-btn" onclick="onFontSize(4)">
                             <div class="fa font-size">+</div>
                         </button>
+
                         <button class="settings-btns size-btn" onclick="onFontSize(-4)">
                             <div class="fa font-size">-</div>
                         </button>
+
                         <select name="font" id="selectFont" onchange="onSelectFont(value)">
                             <option value="Arial">Arial</option>
                             <option value="Georgia">Georgia</option>
@@ -54,6 +57,12 @@
                             <option value="monospace">monospace</option>
                             <option value="cursive">cursive</option>
                         </select>
+                    </div>
+
+                    <div class="alignments flex">
+                        <button class="alignment-btns settings-btns fa alignment-left" onclick="onAlignment('left')"></button>
+                        <button class="alignment-btns settings-btns fa alignment-center" onclick="onAlignment('center')"></button>
+                        <button class="alignment-btns settings-btns fa alignment-right" onclick="onAlignment('right')"></button>
                     </div>
 
                     <div class="act flex">

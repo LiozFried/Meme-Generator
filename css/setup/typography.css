@@ -30,3 +30,15 @@
 .fa.switch-line::before {
     content: '\e4af';
 }
+
+.fa.alignment-left::before {
+    content: '\f036';
+}
+
+.fa.alignment-center::before {
+    content: '\f037';
+}
+
+.fa.alignment-right::before {
+    content: '\f038';
+}

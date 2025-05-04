@@ -85,6 +85,11 @@ function onSelectFont(value) {
     renderMeme()
 }
 
+function onAlignment(dir) {
+    alignment(dir)
+    renderMeme()
+}
+
 function onDownloadCanvas(elLink) {
     const dataUrl = gElCanvas.toDataURL()
 

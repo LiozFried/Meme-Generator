@@ -101,6 +101,27 @@ function selectFont(value) {
     gMeme.lines[idx].font = value
 }
 
+function alignment(dir) {
+    const idx = gMeme.selectedLineIdx
+    const txtWidth = measureTextWidth(gMeme.lines[idx].txt, gMeme.lines[idx].font, gMeme.lines[idx].size)
+    var posX
+
+    switch (dir) {
+        case 'left':
+            posX = 10
+            gMeme.lines[idx].pos.x = posX
+            break
+        case 'center':
+            posX = ((gElCanvas.width / 2) - (txtWidth.width / 2))
+            gMeme.lines[idx].pos.x = posX
+            break
+        case 'right':
+            posX = (gElCanvas.width - txtWidth.width - 10)
+            gMeme.lines[idx].pos.x = posX
+            break
+    }
+}
+
 function txtClicked(clickedPos) {
     const lines = gMeme.lines
     lines.forEach(line => {
