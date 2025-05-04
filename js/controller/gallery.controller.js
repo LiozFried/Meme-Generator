@@ -18,5 +18,6 @@ function onImgSelect(elImg) {
     hideElement('.main-gallery')
     showElement('.main-editor')
     defineCanvas()
+    // onResize()
     renderMeme()
 }
