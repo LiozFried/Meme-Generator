@@ -96,6 +96,11 @@ function setFontSize(diff) {
     gMeme.lines[idx].size += diff
 }
 
+function selectFont(value) {
+    const idx = gMeme.selectedLineIdx
+    gMeme.lines[idx].font = value
+}
+
 function txtClicked(clickedPos) {
     const lines = gMeme.lines
     lines.forEach(line => {

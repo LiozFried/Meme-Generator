@@ -80,6 +80,11 @@ function onFontSize(diff) {
     renderMeme()
 }
 
+function onSelectFont(value) {
+    selectFont(value)
+    renderMeme()
+}
+
 function onDownloadCanvas(elLink) {
     const dataUrl = gElCanvas.toDataURL()
 
