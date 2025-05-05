@@ -1,5 +1,6 @@
 'use strict'
 function onLogo() {
+    clearCanvas()
     hideElement('.main-editor')
     showElement('.main-gallery')
 }

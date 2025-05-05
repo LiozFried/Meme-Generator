@@ -81,6 +81,20 @@ function countLines() {
     gLinesCount = gMeme.lines.length - 1
 }
 
+function clearCanvas() {
+    gCtx.clearRect(0, 0, 20, 20)
+}
+
+function checkLines() {
+    if (!gMeme.lines.length) {
+        addLine()
+        updateLinesIdx()
+        gMeme.selectedLineIdx = 0
+    }else{
+        return
+    }
+}
+
 function switchLine() {
     gMeme.selectedLineIdx++
     if (gMeme.selectedLineIdx >= gMeme.lines.length) gMeme.selectedLineIdx = 0
@@ -146,7 +160,7 @@ function txtClicked(clickedPos) {
     lines.forEach(line => {
         let end = measureTextWidth(line.txt, line.font, line.size)
 
-        if ((clickedPos.x >= (line.pos.x - 5) && clickedPos.x <= (line.pos.x + end.width + 10)) && (clickedPos.y >= (line.pos.y - end.hight + 3) && clickedPos.y <= (line.pos.y + end.hight))) {
+        if ((clickedPos.x >= (line.pos.x - 5) && clickedPos.x <= (line.pos.x + end.width + 10)) && (clickedPos.y >= (line.pos.y - end.height + 3) && clickedPos.y <= (line.pos.y + end.height))) {
             gMeme.selectedLineIdx = line.lineIdx
         } else {
             return
@@ -159,7 +173,7 @@ function measureTextWidth(txt, font, fontSize) {
     const metrics = gCtx.measureText(txt)
     let fontHeight = metrics.fontBoundingBoxAscent + metrics.fontBoundingBoxDescent
 
-    return { width: metrics.width, hight: fontHeight }
+    return { width: metrics.width, height: fontHeight }
 }
 
 async function uploadImg(imgData, onSuccess) {

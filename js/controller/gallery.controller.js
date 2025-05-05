@@ -19,6 +19,7 @@ function onImgSelect(elImgId) {
     showElement('.main-editor')
     defineCanvas()
     onResize()
+    checkLines()
     renderMeme()
 }
 

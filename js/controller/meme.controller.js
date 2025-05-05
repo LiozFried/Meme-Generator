@@ -64,6 +64,9 @@ function onDeleteLine() {
 
 function renderFrameSelectedTxt() {
     const meme = getMeme()
+    
+    if (!meme.lines.length) return
+
     const txtLineIdx = meme.selectedLineIdx
     const size = meme.lines[txtLineIdx].size
 
