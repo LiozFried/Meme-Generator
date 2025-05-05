@@ -19,6 +19,11 @@
     .editor {
         grid-template-columns: 1fr 1fr;
     }
+
+    .canvas-container {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 /* LARGE */

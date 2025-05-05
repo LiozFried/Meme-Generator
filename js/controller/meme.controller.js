@@ -8,11 +8,12 @@ function defineCanvas() {
     gCtx = gElCanvas.getContext('2d')
 }
 
-// function onResize() {
-//     const elContainer = document.querySelector('.canvas-container')
-//     gElCanvas.width = elContainer.clientWidth
-//     renderMeme()
-// }
+function onResize() {
+    const elContainer = document.querySelector('.canvas-container')
+    if (!gElCanvas) return
+    gElCanvas.width = elContainer.clientWidth
+    renderMeme()
+}
 
 function renderMeme() {
     const meme = getMeme()
@@ -22,7 +23,7 @@ function renderMeme() {
 
     const img = new Image()
     img.src = imgUrl
-    // gElCanvas.height = (img.naturalHeight / img.naturalWidth) * gElCanvas.width
+    gElCanvas.height = (img.naturalHeight / img.naturalWidth) * gElCanvas.width
     img.onload = () => {
         gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height)
         // drawText(txtLine.txt, txtLine.font, txtLine.size, txtLine.color, 100, 40)
