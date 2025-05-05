@@ -1,5 +1,5 @@
 .settings {
-    margin-block-start: 2em;
+    /* margin-block-start: 2em; */
     justify-content: space-evenly;
 
     padding: 0.5em;
@@ -12,7 +12,7 @@
 
 .alignments {
     justify-content: space-evenly;
-    margin-block-start: 2em;
+    /* margin-block-start: 2em; */
     padding: 0.5em;
     background-color: #049e9ead;
 }
