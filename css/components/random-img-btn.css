@@ -1,0 +1,8 @@
+.random-img-btn {
+    margin-block-start: 2em;
+    margin-inline-start: 2em;
+
+    border-radius: 2em;
+    padding: 0.5em 1em;
+    background-color: #f87000;
+}

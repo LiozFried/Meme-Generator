@@ -16,6 +16,7 @@
 @import url('./components/settings-btns.css');
 @import url('./components/lines-settings.css');
 @import url('./components/footer.css');
+@import url('./components/random-img-btn.css');
 
 /* MEDIA QUERY */
 @import url('./setup/mq.css');

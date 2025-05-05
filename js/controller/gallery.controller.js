@@ -8,16 +8,21 @@ function onInit() {
 function renderGallery() {
     const elGallery = document.querySelector('.gallery')
     const srtHtml = gImgs.map(img => (
-        `<img src="${img.url}" id="${img.id}" onclick="onImgSelect(this)"></img>`
+        `<img src="${img.url}" id="${img.id}" onclick="onImgSelect(this.id)"></img>`
     ))
     elGallery.innerHTML = srtHtml.join('')
 }
 
-function onImgSelect(elImg) {
-    setImg(+elImg.id)
+function onImgSelect(elImgId) {
+    setImg(+elImgId)
     hideElement('.main-gallery')
     showElement('.main-editor')
     defineCanvas()
     // onResize()
     renderMeme()
+}
+
+function onRandomImg() {
+    const randImgIdx = getRandomInt(1, gImgs.length + 1)
+    onImgSelect(randImgIdx)
 }
