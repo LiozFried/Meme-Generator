@@ -56,6 +56,11 @@ function onSwitchLine() {
     renderMeme()
 }
 
+function onDeleteLine() {
+    deleteLine()
+    renderMeme()
+}
+
 function renderFrameSelectedTxt() {
     const meme = getMeme()
     const txtLineIdx = meme.selectedLineIdx

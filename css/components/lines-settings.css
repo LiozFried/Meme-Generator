@@ -3,4 +3,18 @@
     gap: 15px;
 
     margin-block-start: 2em;
+    background-color: #049e9ead;
+    padding: 0.5em;
+}
+
+.lines-settings .add-line {
+    background-color: #4bbe09;
+}
+
+.lines-settings .switch-line {
+    background-color: #e100ff;
+}
+
+.lines-settings .delete-line {
+    background-color: #ff1818;
 }

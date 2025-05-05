@@ -50,3 +50,7 @@
 .fa.move-down::before {
     content: '\f103';
 }
+
+.fa.delete-line::before {
+    content: '\f2ed';
+}

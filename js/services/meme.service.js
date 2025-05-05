@@ -86,6 +86,19 @@ function switchLine() {
     if (gMeme.selectedLineIdx >= gMeme.lines.length) gMeme.selectedLineIdx = 0
 }
 
+function deleteLine() {
+    var idx = gMeme.selectedLineIdx
+    gMeme.lines.splice(idx, 1)
+    updateLinesIdx()
+    gMeme.selectedLineIdx = 0
+}
+
+function updateLinesIdx() {
+    gMeme.lines.forEach((line, newLineIdx) => {
+        line.lineIdx = newLineIdx
+    })
+}
+
 function setTxtColor(value) {
     const idx = gMeme.selectedLineIdx
     gMeme.lines[idx].color = value
