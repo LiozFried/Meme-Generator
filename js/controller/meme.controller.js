@@ -90,6 +90,11 @@ function onAlignment(dir) {
     renderMeme()
 }
 
+function onVerticalMove(diff) {
+    verticalMove(diff)
+    renderMeme()
+}
+
 function onDownloadCanvas(elLink) {
     const dataUrl = gElCanvas.toDataURL()
 

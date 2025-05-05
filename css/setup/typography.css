@@ -42,3 +42,11 @@
 .fa.alignment-right::before {
     content: '\f038';
 }
+
+.fa.move-up::before {
+    content: '\f102';
+}
+
+.fa.move-down::before {
+    content: '\f103';
+}

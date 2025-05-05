@@ -122,6 +122,11 @@ function alignment(dir) {
     }
 }
 
+function verticalMove(diff) {
+    const idx = gMeme.selectedLineIdx
+    gMeme.lines[idx].pos.y += diff
+}
+
 function txtClicked(clickedPos) {
     const lines = gMeme.lines
     lines.forEach(line => {
