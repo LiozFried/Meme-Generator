@@ -29,7 +29,7 @@ var gMeme = {
             txt: 'Good Meme',
             font: 'Arial',
             size: 40,
-            color: 'black',
+            color: '#000000',
             pos: { x: 10, y: 50 },
             lineIdx: 0,
         },
@@ -37,7 +37,7 @@ var gMeme = {
             txt: 'Second Line',
             font: 'Arial',
             size: 20,
-            color: 'black',
+            color: '#000000',
             pos: { x: 10, y: 100 },
             lineIdx: 1,
         },
@@ -69,7 +69,7 @@ function addLine() {
         txt: 'New Line',
         font: 'Arial',
         size: 20,
-        color: 'black',
+        color: '#000000',
         pos: { x: 10, y: 50 * (gMeme.lines.length + 1) },
         lineIdx: gLinesCount + 1,
     }
@@ -90,7 +90,8 @@ function checkLines() {
         addLine()
         updateLinesIdx()
         gMeme.selectedLineIdx = 0
-    }else{
+        changeInputs()
+    } else {
         return
     }
 }
@@ -105,6 +106,7 @@ function deleteLine() {
     gMeme.lines.splice(idx, 1)
     updateLinesIdx()
     gMeme.selectedLineIdx = 0
+    changeInputs()
     countLines()
 }
 

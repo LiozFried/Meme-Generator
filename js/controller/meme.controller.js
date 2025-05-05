@@ -54,6 +54,7 @@ function onAddLine() {
 function onSwitchLine() {
     switchLine()
     renderFrameSelectedTxt()
+    changeInputs()
     renderMeme()
 }
 
@@ -64,7 +65,7 @@ function onDeleteLine() {
 
 function renderFrameSelectedTxt() {
     const meme = getMeme()
-    
+
     if (!meme.lines.length) return
 
     const txtLineIdx = meme.selectedLineIdx
@@ -102,6 +103,14 @@ function onVerticalMove(diff) {
     renderMeme()
 }
 
+function changeInputs() {
+    if (!gMeme.lines.length) return
+    const memeLine = gMeme.lines[gMeme.selectedLineIdx]
+    document.getElementById('memeTxt').value = memeLine.txt
+    document.getElementById('txtColor').value = memeLine.color
+    document.getElementById('selectFont').value = memeLine.font
+}
+
 function onDownloadCanvas(elLink) {
     const dataUrl = gElCanvas.toDataURL()
 
@@ -123,6 +132,7 @@ function onShareImgOnFacebook(ev) {
 function onTxt(ev) {
     const pos = getEvPos(ev)
     txtClicked(pos)
+    changeInputs()
     renderMeme()
 }
 
