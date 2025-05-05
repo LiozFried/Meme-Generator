@@ -1,5 +1,7 @@
 .act {
+    position: relative;
     margin-top: auto;
+    justify-content: space-between;
 }
 
 .act-btns {
@@ -14,4 +16,16 @@
 
 .act-btns.download-btn {
     background-color: #c138eb;
+}
+
+.act form {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    
+}
+
+.act-btns.share-facebook-btn {
+    padding: 0.5em 0.5em;
+    background-color: #0019fd;
 }

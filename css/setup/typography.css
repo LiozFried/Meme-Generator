@@ -54,3 +54,16 @@
 .fa.delete-line::before {
     content: '\f2ed';
 }
+
+@font-face {
+    font-family: fa-brand;
+    src: url('/fonts/fa/fa-brands-400.ttf');
+}
+
+.fa-brand::before {
+    font-family: fa-brand;
+}
+
+.fa-brand.facebook::before {
+    content: '\f09a';
+}

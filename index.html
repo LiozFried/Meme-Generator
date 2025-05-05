@@ -77,6 +77,12 @@
                     <div class="act flex">
                         <a href="#" class="act-btns download-btn flex" onclick="onDownloadCanvas(this)"
                             download="file-name">Download Meme <div class="fa download"></div></a>
+                        <form action="" method="POST" enctype="multipart/form-data"
+                            onsubmit="onShareImgOnFacebook(event)">
+                            <input name="img" id="imgData" type="hidden" />
+                            <button class="act-btns share-facebook-btn flex" type="submit">Share on Facebook <div
+                                    class="fa-brand facebook"></div></button>
+                        </form>
                     </div>
 
                 </aside>

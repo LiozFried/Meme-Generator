@@ -107,6 +107,17 @@ function onDownloadCanvas(elLink) {
     elLink.download = 'my-meme'
 }
 
+function onShareImgOnFacebook(ev) {
+    ev.preventDefault()
+    const dataUrl = gElCanvas.toDataURL('image/jpeg')
+
+    function onSucces(uploadedImgUrl) {
+        const encodedUploadedImgUrl = encodeURIComponent(uploadedImgUrl)
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodedUploadedImgUrl}&t=${encodedUploadedImgUrl}`)
+    }
+    uploadImg(dataUrl, onSucces)
+}
+
 function onTxt(ev) {
     const pos = getEvPos(ev)
     console.log(pos)
